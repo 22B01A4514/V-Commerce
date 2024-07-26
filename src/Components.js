@@ -3,7 +3,7 @@ import { globalContext } from './App';
 
 function Eight({ p }) {
     const { globalcount, setglobalcount } = useContext(globalContext);
-    const [mrp, setMrp] = useState(p); // Initialize mrp with the passed prop p
+    const mrp = useState(p); // Initialize mrp with the passed prop p
     const [number, setNumber] = useState(1);
     const {totalPrice, setTotalPrice} = useContext(globalContext); // Initialize total price with the passed prop p
     useEffect(() => {
