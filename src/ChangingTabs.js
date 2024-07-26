@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import Register from '../../day2project/src/register.js';
-import Login from '../../day2project/src/login.js';
+import Register from './register.js';
+import Login from './login.js';
 import Navigation from './navigation.js';
 function Tabsfunctionality(){
     const [currentTab,setCurrentTab] = useState(true);

@@ -1,5 +1,5 @@
 import React,{useRef,useState,useEffect, useContext} from 'react';
-import Profile from './profile';
+// import Profile from './profile';
 import { globalContext } from './App';
 function Register()
 {
