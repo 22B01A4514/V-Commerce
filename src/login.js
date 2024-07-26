@@ -23,7 +23,7 @@ function Login()
 useEffect(()=>{
     firstRef.current.focus();
 })
-    return (<div style={{margin:"auto",marginTop:20,borderRadius:10,backgroundColor:"#BCF1F8",border:"2px solid gray",width:450,padding:10,display:"flex",flexDirection:"column",padding:30}}>
+    return (<div style={{margin:"auto",marginTop:20,borderRadius:10,backgroundColor:"#BCF1F8",border:"2px solid gray",width:450,display:"flex",flexDirection:"column",padding:30}}>
         <h1 style={{color:"white",textShadow:"1px 1px 8px #2E236C"}}>Login</h1>
         <p>Provide your credentials</p><br/>
         <form onSubmit={formSubmit} style={{fontSize:25,display:"flex",flexDirection : "column",justifyContent:"center"}}>

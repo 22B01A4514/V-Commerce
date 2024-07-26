@@ -6,7 +6,7 @@ function Rev(){
         <ul style={{fontSize:20}}>
         {names.map((name, index) => (
             <dl key={index}>
-                <dt><img alt="image"style={{borderTopLeftRadius:20,borderTopRightRadius:20,borderBottomLeftRadius:20,borderBottomRightRadius:20}} src={paths[index]} width={20} height={20}></img>
+                <dt><img alt="pic"style={{borderTopLeftRadius:20,borderTopRightRadius:20,borderBottomLeftRadius:20,borderBottomRightRadius:20}} src={paths[index]} width={20} height={20}></img>
                 &nbsp;&nbsp;{name}</dt>
                 <dd>--{descriptions[index]}</dd>
             </dl>

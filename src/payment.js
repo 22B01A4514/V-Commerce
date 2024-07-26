@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 // import { globalContext } from "./App";
 import Navigation from "./navigation";
 

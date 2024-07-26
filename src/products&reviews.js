@@ -1,6 +1,5 @@
 import React, { useContext, useRef,useState } from 'react';
-import Eight from './Components.js';
-import Rev from './reviews.js';
+
 import { globalContext } from './App.js';
 import Navigation from './navigation.js';
 function Details() {
@@ -29,7 +28,7 @@ function Details() {
             </div>
             <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
                 <div>
-                    <img alt="image"width={300} height={300} src={data.path} alt="Product" />
+                    <img alt="image"width={300} height={300} src={data.path} />
                 </div>
                 <div style={{ flex: 1, marginLeft: 20 }}>
                     <h2>Product Name</h2>
