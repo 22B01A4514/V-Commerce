@@ -15,7 +15,7 @@ function App(){
 
     const [globalcount,setglobalcount] =useState(0);
     const [globalUserObject,setGlobalUserObject] = useState({});
-    const [card,setcard] = useState({});
+    const [card,setcard] = useState([]);
     return (<globalContext.Provider value={{globalcount,setglobalcount,globalUserObject,setGlobalUserObject,card,setcard}}>
             <BrowserRouter>
                 <Routes>
