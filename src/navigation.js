@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { usercontext } from './home';
 import { globalContext } from './App';
 
 function Navigation() {
-    const { globalcount, setglobalcount } = useContext(globalContext);
+    const { globalcount } = useContext(globalContext);
 
     return (
         <div style={{ backgroundColor: 'rgba(200,20,200,0.4)', color: 'white', padding: 10 }}>

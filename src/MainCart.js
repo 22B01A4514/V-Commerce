@@ -5,7 +5,7 @@ import Navigation from "./navigation";
 import { useNavigate } from "react-router-dom";
 function CardList() {
     const { card } = useContext(globalContext);
-    const {totalPrice, setTotalPrice} = useContext(globalContext);
+    const {totalPrice} = useContext(globalContext);
     const nav = useNavigate();
     const func = () =>{
             nav('/payment');

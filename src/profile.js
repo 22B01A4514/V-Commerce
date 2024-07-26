@@ -2,11 +2,12 @@ import { useContext, useEffect } from "react";
 import { globalContext } from "./App";
 import Navigation from "./navigation";
 function Profile() {
-    const { globalUserObject, setGlobalUserObject } = useContext(globalContext);
+    const { globalUserObject} = useContext(globalContext);
     useEffect(()=>{
         const name = localStorage.getItem("name");
         const branch = localStorage.getItem("branch");
         console.log(name);
+        console.log(branch)
     })
     return (
         <div style={{justifyContent:"center",alignItems:"center",alignContent:"center",margin:30}}>

@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import Register from './register.js';
 import Login from './login.js';
-import Navigation from './navigation.js';
 function Tabsfunctionality(){
     const [currentTab,setCurrentTab] = useState(true);
     const swit = () =>{

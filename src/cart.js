@@ -1,7 +1,7 @@
-import React, { useContext,useState} from "react";
+import React, { useContext} from "react";
 import { globalContext } from "./App";
 function Cart({ path, title, price, reviewsrate, reviewscount }) {
-    const { card, setcard } = useContext(globalContext);
+    const { setcard } = useContext(globalContext);
     const func = () => {
         const obj = { path, title, price, reviewsrate, reviewscount };
     setcard((prevcards)=>[...prevcards,obj]);

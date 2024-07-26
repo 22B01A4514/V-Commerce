@@ -6,8 +6,8 @@ import Navigation from './navigation.js';
 function Details() {
     const [append,setappend] = useState([]);
     const firstRef = useRef(null);
-    const {data,setdata} = useContext(globalContext);
-    const { card, setcard } = useContext(globalContext);
+    const {data} = useContext(globalContext);
+    const {  setcard } = useContext(globalContext);
     const formSubmit = (event) => {
         event.preventDefault();
         console.log("Adding Review");

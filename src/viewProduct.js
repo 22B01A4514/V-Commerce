@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import Details from "./products&reviews"; 
 import { useNavigate } from "react-router-dom";
 import { globalContext } from "./App";
 function View({path, title, price, reviewsrate, reviewscount,description }) {
-    const {data,setdata} = useContext(globalContext);
+    const {setdata} = useContext(globalContext);
     const nav = useNavigate();
     const func = () => {
         nav('/view');

@@ -1,14 +1,15 @@
 import { useContext, useEffect } from "react";
-import { globalContext } from "./App";
+// import { globalContext } from "./App";
 import Navigation from "./navigation";
 
 function Payment() {
-    const { globalUserObject, setGlobalUserObject } = useContext(globalContext);
+    // const { globalUserObject, setGlobalUserObject } = useContext(globalContext);
 
     useEffect(() => {
         const name = localStorage.getItem("name");
         const branch = localStorage.getItem("branch");
         console.log(name);
+        console.log(branch);
     }, []);
 
     return (

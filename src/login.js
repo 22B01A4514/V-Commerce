@@ -1,12 +1,12 @@
-import React,{useRef,useState,useEffect, useContext} from 'react';
+import React,{useRef,useEffect, useContext} from 'react';
 import { usercontext } from './home';
 import { globalContext } from './App';
 function Login()
 {
     const firstRef = useRef(null);
     const secondRef = useRef(null);
-    const {islogin,setlogin}=useContext(usercontext);
-    const {globalUserObject,setGlobalUserObject} = useContext(globalContext);
+    const {setlogin}=useContext(usercontext);
+    const {globalUserObject} = useContext(globalContext);
     const formSubmit=(event)=>{
         event.preventDefault();
         if(firstRef.current.value===globalUserObject.id && secondRef.current.value===globalUserObject.pass)

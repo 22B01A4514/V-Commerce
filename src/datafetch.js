@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Cart from './cart.js';
 import axios from 'axios';
 import Navigation from "./navigation.js";
 import View from "./viewProduct.js";

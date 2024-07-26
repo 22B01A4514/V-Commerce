@@ -1,5 +1,4 @@
-import React,{useRef,useState,useEffect, useContext} from 'react';
-// import Profile from './profile';
+import React,{useRef,useState, useContext} from 'react';
 import { globalContext } from './App';
 function Register()
 {
@@ -11,28 +10,18 @@ function Register()
     const [pass,setpass] = useState('');
     const [branchValue,setBranch] = useState('');
     const [gender,setGender] = useState('');
-    // const [submitted,setsubmitted] = useState(false);
-    const {globalUserObject,setGlobalUserObject} = useContext(globalContext);
+    const {setGlobalUserObject} = useContext(globalContext);
     const getBranch = (event) =>{
         console.log(branchValue);
         setBranch(event.target.value);
         console.log.apply(branchValue);
     }
     const formSubmit=(event)=>{
-        // console.log(IdRef.current.value);
-        // console.log(passRef.current.value);
-        // console.log(emailRef.current.value);
+        
         event.preventDefault();
-        // console.log("Data");
-        // console.log(id);
-        // console.log(mail);
-        // console.log(pass);
-        // console.log(branchValue);
-        // console.log(gender);
         const obj = {id,mail,pass,branchValue,gender};
         setGlobalUserObject(obj);
         console.log(obj);
-        // setsubmitted(true);
     }
     const getGender = (event)=>{
         console.log(gender);
