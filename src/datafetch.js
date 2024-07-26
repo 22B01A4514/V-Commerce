@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Cart from './cart.js';
 import axios from 'axios';
 import Navigation from "./navigation.js";
+import View from "./viewProduct.js";
 function Datafetch() {
     const [data, setData] = useState([]);
 
@@ -22,7 +23,7 @@ function Datafetch() {
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
      {data.map((dataItem) => (
                 <div >
-                <Cart 
+                <View
                     key={dataItem.id} 
                     path={dataItem.image} 
                     title={dataItem.title} 
@@ -31,6 +32,7 @@ function Datafetch() {
                     reviewscount={dataItem.rating.count} 
                     width={500} 
                     height={600} 
+                    description ={dataItem.description}
                 />
                 </div>
             ))}

@@ -1,9 +1,13 @@
-import React, { useRef,useState } from 'react';
+import React, { useContext, useRef,useState } from 'react';
 import Eight from './Components.js';
 import Rev from './reviews.js';
+import { globalContext } from './App.js';
+import Navigation from './navigation.js';
 function Details() {
     const [append,setappend] = useState([]);
     const firstRef = useRef(null);
+    const {data,setdata} = useContext(globalContext);
+    const { card, setcard } = useContext(globalContext);
     const formSubmit = (event) => {
         event.preventDefault();
         console.log("Adding Review");
@@ -11,7 +15,13 @@ function Details() {
         console.log(firstRef.current.value);
         firstRef.current.value = ""; 
     }
+    const func = () =>{
+        const obj = { path:data.path, title:data.title, price:data.price, reviewsrate:data.reviewsrate, reviewscount:data.reviewscount };
+        setcard((prevcards)=>[...prevcards,obj]);
+    }
     return (
+        <div>
+            <Navigation/>
         <div
             style={{padding: 10,border: '2px solid gray',boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
             <div>
@@ -19,25 +29,28 @@ function Details() {
             </div>
             <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
                 <div>
-                    <img width={300} height={300} src="Shirt.jpg" alt="Product" />
+                    <img width={300} height={300} src={data.path} alt="Product" />
                 </div>
                 <div style={{ flex: 1, marginLeft: 20 }}>
                     <h2>Product Name</h2>
                     <p>
-                        Casual shirts are great for everyday wear and come in a few popular styles. Button-down shirts
+                        {/* Casual shirts are great for everyday wear and come in a few popular styles. Button-down shirts
                         are classic and can be dressed up or down. T-shirts are simple and comfortable, perfect for
                         lounging or casual outings. Polo shirts add a touch of style with their collar and buttons.
                         Henleys are similar to T-shirts but have a buttoned neck. Flannel shirts are soft and warm, often
-                        with plaid patterns. Each type offers a relaxed look suitable for various activities.
+                        with plaid patterns. Each type offers a relaxed look suitable for various activities. */}
+                        {data.title}
                     </p>
-                    <Eight />
+                    <h3>Price : <span style={{fontWeight:"normal"}}>{data.price}$</span></h3>
+                    {/* <Eight /> */}
+                    <button onClick={func}>Add to cart</button>
                 </div>
             </div>
             <hr />
             <div>
                 <h2>Product Specifications</h2>
                 <p style={{ fontFamily: 'verdana' }}>
-                    Slices of raw onion, lettuce, bacon, mayonnaise, and other ingredients add flavor.
+                {data.description}    
                 </p>
             </div>
             <hr />
@@ -59,6 +72,7 @@ function Details() {
                     }
                 </ul>
              </div>
+        </div>
         </div>
     );
 }
