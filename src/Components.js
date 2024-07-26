@@ -7,15 +7,15 @@ function Eight({ p }) {
     const [number, setNumber] = useState(1);
     const { totalPrice, setTotalPrice } = useContext(globalContext); // Initialize total price with the passed prop p
 
-    useEffect(() => {
-        console.log("Mounted");
-        console.log(number);
-        console.log(number + 1);
-        console.log(mrp * number);
-        return () => {
-            console.log("Unmounted");
-        };
-    }, []);
+    // useEffect(() => {
+    //     console.log("Mounted");
+    //     console.log(number);
+    //     console.log(number + 1);
+    //     console.log(mrp * number);
+    //     return () => {
+    //         console.log("Unmounted");
+    //     };
+    // }, []);
 
     useEffect(() => {
         console.log("Updated!!!");
