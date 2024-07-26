@@ -29,7 +29,7 @@ function Details() {
             </div>
             <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
                 <div>
-                    <img width={300} height={300} src={data.path} alt="Product" />
+                    <img alt="image"width={300} height={300} src={data.path} alt="Product" />
                 </div>
                 <div style={{ flex: 1, marginLeft: 20 }}>
                     <h2>Product Name</h2>
