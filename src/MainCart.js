@@ -17,7 +17,7 @@ function CardList() {
             <h1>Cart</h1>
             {card.map((item, index) => (
                 <div key={index} style={{ display: "flex", flexDirection: "row", marginBottom: 10 ,boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",borderRadius:20,border:"2px solid gray",width:500,padding:10}}>
-                    <img alt="image"style={{ width: 140, height: 140 }} src={item.path} alt={item.title} />
+                    <img alt="asdf"style={{ width: 140, height: 140 }} src={item.path} alt={item.title} />
                     <div style={{ padding: 10, marginLeft: 7, marginTop: -20 }}>
                         <h4>{item.title}</h4>
                         <Eight p={item.price} />

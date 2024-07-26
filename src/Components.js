@@ -3,9 +3,10 @@ import { globalContext } from './App';
 
 function Eight({ p }) {
     const { globalcount, setglobalcount } = useContext(globalContext);
-    const mrp = useState(p); // Initialize mrp with the passed prop p
+    const [mrp, setMrp] = useState(p); // Initialize mrp with the passed prop p
     const [number, setNumber] = useState(1);
-    const {totalPrice, setTotalPrice} = useContext(globalContext); // Initialize total price with the passed prop p
+    const { totalPrice, setTotalPrice } = useContext(globalContext); // Initialize total price with the passed prop p
+
     useEffect(() => {
         console.log("Mounted");
         console.log(number);
@@ -19,7 +20,7 @@ function Eight({ p }) {
     useEffect(() => {
         console.log("Updated!!!");
         setTotalPrice(mrp * number); 
-    }, [number, mrp]);
+    }, [number, mrp, setTotalPrice]);
 
     const funcBtnClick = () => {
         console.log("Button Clicked");
@@ -27,6 +28,7 @@ function Eight({ p }) {
             setNumber(prevNumber => {
                 const newNumber = prevNumber - 1;
                 setglobalcount(globalcount - 1);
+                setMrp(globalContext);
                 return newNumber;
             });
         }
@@ -66,4 +68,4 @@ function Eight({ p }) {
     );
 }
 
-export default Eight
+export default Eight;
