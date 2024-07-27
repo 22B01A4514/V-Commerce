@@ -13,7 +13,7 @@ function App() {
     const [globalcount, setglobalcount] = useState(0);
     const [globalUserObject, setGlobalUserObject] = useState({});
     const [card, setcard] = useState([]);
-    const [data, setdata] = useState({});
+    const [data, setdata] = useState({} );
     const [globalprice, setglobalprice] = useState(0);
 
     return (
