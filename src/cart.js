@@ -1,9 +1,9 @@
 import React, { useContext} from "react";
 import { globalContext } from "./App";
-function Cart({ path, title, price, reviewsrate, reviewscount }) {
+function Cart({ path, title, price, reviewsrate, reviewscount}) {
     const { setcard } = useContext(globalContext);
     const func = () => {
-        const obj = { path, title, price, reviewsrate, reviewscount };
+        const obj = { path, title, price, reviewsrate, reviewscount};
     setcard((prevcards)=>[...prevcards,obj]);
 };
 

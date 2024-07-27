@@ -1,44 +1,32 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { globalContext } from './App';
 
-function Eight({ p }) {
-    const { globalcount, setglobalcount } = useContext(globalContext);
-    const [mrp, setMrp] = useState(p); // Initialize mrp with the passed prop p
-    const [number, setNumber] = useState(1);
-    const { totalPrice, setTotalPrice } = useContext(globalContext); // Initialize total price with the passed prop p
+function Eight({ p, q }) {
+    const { globalcount, setglobalcount, globalprice, setglobalprice } = useContext(globalContext);
+    const [mrp, setMrp] = useState(p); 
+    const [number, setNumber] = useState(q);
+    const [totalPrice, setTotalPrice] = useState(p); 
 
-    // useEffect(() => {
-    //     console.log("Mounted");
-    //     console.log(number);
-    //     console.log(number + 1);
-    //     console.log(mrp * number);
-    //     return () => {
-    //         console.log("Unmounted");
-    //     };
-    // }, []);
-
-    useEffect(() => {
-        console.log("Updated!!!");
-        setTotalPrice(mrp * number); 
-    }, [number, mrp, setTotalPrice]);
-
+    useEffect(()=> {
+        setTotalPrice(mrp * number);
+    },[number, mrp]);
+    
     const funcBtnClick = () => {
-        console.log("Button Clicked");
         if (number > 1) {
             setNumber(prevNumber => {
                 const newNumber = prevNumber - 1;
                 setglobalcount(globalcount - 1);
-                setMrp(globalContext);
+                setglobalprice(globalprice - mrp);
                 return newNumber;
             });
         }
     };
 
     const funcBtnClick1 = () => {
-        console.log("Button Clicked");
         setNumber(prevNumber => {
             const newNumber = prevNumber + 1;
             setglobalcount(globalcount + 1);
+            setglobalprice(globalprice + mrp);
             return newNumber;
         });
     };
