@@ -9,6 +9,7 @@ function Eight({ p, q }) {
 
     useEffect(()=> {
         setTotalPrice(mrp * number);
+        setMrp(mrp);
     },[number, mrp]);
     
     const funcBtnClick = () => {

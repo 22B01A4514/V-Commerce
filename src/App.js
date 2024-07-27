@@ -10,7 +10,7 @@ import Payment from './payment.js';
 export const globalContext = createContext();
 
 function App() {
-    const [globalcount, setglobalcount] = useState(1);
+    const [globalcount, setglobalcount] = useState(0);
     const [globalUserObject, setGlobalUserObject] = useState({});
     const [card, setcard] = useState([]);
     const [data, setdata] = useState({});
